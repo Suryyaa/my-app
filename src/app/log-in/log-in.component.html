@@ -1,0 +1,8 @@
+<p>log-in works!</p>
+<form #MyForm="ngForm">
+<input #emailVariable="ngModel" type="text" required name="email" ngModel >
+<span *ngIf="emailVariable.invalid && emailVariable.dirty">please entere data</span>
+<input type="password" name="password" ngModel>
+<button >submit</button>
+
+</form>

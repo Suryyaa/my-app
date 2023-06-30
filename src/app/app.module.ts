@@ -31,6 +31,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { SearchImagesComponent } from './search-images/search-images.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ZoomImageComponent } from './zoom-image/zoom-image.component';
+import { LogInComponent } from './log-in/log-in.component';
+import { FormsModule } from '@angular/forms';
 
 const route:Routes=[
   {path:'Home',component:DashBoardComponent},
@@ -38,6 +40,7 @@ const route:Routes=[
   {path:'user-details',component:UserDetailsComponent},
   {path:'Search',component:SearchImagesComponent},
   {path:'Zoom-Image',component:ZoomImageComponent},
+  {path:'Login',component:LogInComponent},
 ]
 
 
@@ -57,7 +60,8 @@ const route:Routes=[
     TableComponent,
     UserDetailsComponent,
     SearchImagesComponent,
-    ZoomImageComponent
+    ZoomImageComponent,
+    LogInComponent
   ],
   imports: [             //here we import all structures on our webpg
     BrowserModule, 
@@ -75,7 +79,8 @@ const route:Routes=[
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
